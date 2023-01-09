@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings', [
+        'heading' => 'Latest Listings',
+        'listings' => [
+            'First Listing' => 1,
+            'Second Listing' => 'Listing One',
+            'Third Listing' => 'Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Aliquam ac dui neque.
+            Curabitur consequat ante et turpis lacinia,
+            quis sagittis nisi malesuada. Pellentesque rhoncus nibh ac nisi elementum suscipit.'
+        ]
+    ]);
 });
